@@ -13,13 +13,13 @@ router.post('/', (req, res) => {
         * Data expected to be received:
             * email
             * password
-        
+
         * Security measures and sanitization are not being taken into account.
         * Note: This is a mock api.
     */
 
     const { email, password }: User = req.body;
-    
+
     /* Simulates adding an user to the database. */
     append({ email, password });
     console.log(read());
