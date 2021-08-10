@@ -3,7 +3,7 @@ const router = Router();
 
 import IEmailAndPassword from 'interfaces/IEmailAndPassword';
 
-import { append, read } from 'services/database/database';
+import { append, read } from 'services/database/users';
 
 router.post('/', (req, res) => {
 

@@ -1,5 +1,7 @@
 # Register and Login System
 
+* ***Executive decision to postpone the login ( not really necessary )***
+
 Necessary for indexing posts.
 
 **account id** = email hash
