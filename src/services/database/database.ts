@@ -1,12 +1,14 @@
-const database = {};
+import User from "models/userModel";
 
-const append = (key: string, value: any) => {
-    if (database[key]) throw new Error('This key already exists.');
+const database: User[] = [];
 
-    database[key] = value;
+const append = ({ email, password } : User) => {
+    if (database.some((user) => user.email === email)) throw new Error('This email already exists.');
+
+    database.push({ email, password });
 }
 
-const read = () => Object.freeze(database);
+const read = () => database;
 
 
 export { append, read }
