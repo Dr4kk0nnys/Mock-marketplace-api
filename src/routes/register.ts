@@ -1,7 +1,7 @@
 import { Router } from 'express';
 const router = Router();
 
-import IEmailAndPassword from 'interfaces/IEmailAndPassword';
+import User from 'models/userModel';
 
 import { append, read } from 'services/database/users';
 
@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
         * Note: This is a mock api.
     */
 
-    const { email, password }: IEmailAndPassword = req.body;
+    const { email, password }: User = req.body;
     
     /* Simulates adding an user to the database. */
     append({ email, password });
